@@ -14,5 +14,24 @@ matrix:
     - env: TOXENV=sphinx2.0
     - env: TOXENV=blockdiag_dev
     - env: TOXENV=coverage
+# ppc64le support code
+    - python: 3.5
+      arch: ppc64le
+      env: TOXENV=py35
+    - python: 3.6
+      arch: ppc64le
+      env: TOXENV=py36
+    - python: 3.7
+      arch: ppc64le
+      env: TOXENV=py37
+    - python: 3.8
+      arch: ppc64le
+      env: TOXENV=py38
+    - env: TOXENV=sphinx2.0
+      arch: ppc64le
+    - env: TOXENV=blockdiag_dev
+      arch: ppc64le
+    - env: TOXENV=coverage
+      arch: ppc64le
 install: pip install -U docutils tox
 script: tox
